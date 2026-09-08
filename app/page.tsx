@@ -153,26 +153,36 @@ export default function Home() {
           }
         />
 
-        <PlaceholderTile
-          area="remind"
-          tint="bg-sky-50 dark:bg-sky-950/30"
-          icon={
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={1.5}
-              className="h-8 w-8"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
-              />
-            </svg>
-          }
-        />
+        <a
+          href="https://openschoolsucks-xjlu.onrender.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="area-remind group relative flex flex-col justify-between overflow-hidden rounded-3xl bg-gradient-to-br from-sky-500 to-blue-600 p-6 text-white shadow-sm transition-transform hover:-translate-y-0.5 hover:shadow-lg"
+        >
+          <span className="absolute right-5 top-5 rounded-full bg-white/15 px-3 py-1 text-xs font-medium backdrop-blur-sm">
+            Live
+          </span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={1.5}
+            className="h-8 w-8 opacity-90"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.62 48.62 0 0112 20.904a48.62 48.62 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.636 50.636 0 00-2.658-.813A59.906 59.906 0 0112 3.493a59.903 59.903 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"
+            />
+          </svg>
+          <div>
+            <h2 className="text-lg font-semibold">Open School</h2>
+            <p className="mt-1 text-sm text-white/80">
+              External tool. Opens in a new tab.
+            </p>
+          </div>
+        </a>
       </div>
     </main>
   );
