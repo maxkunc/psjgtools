@@ -1,0 +1,71 @@
+/*
+ * Design tokens for the Zitmapa tool, scoped under .zitmapa-app so they
+ * never leak into the rest of the site (which has its own --background and
+ * --foreground values). Utility classes like bg-card and text-primary are
+ * registered globally in app/globals.css's theme block; only the concrete
+ * color values are scoped here.
+ */
+.zitmapa-app {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.129 0.042 264.695);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.129 0.042 264.695);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.129 0.042 264.695);
+  --primary: oklch(0.208 0.042 265.755);
+  --primary-foreground: oklch(0.984 0.003 247.858);
+  --secondary: oklch(0.968 0.007 247.896);
+  --secondary-foreground: oklch(0.208 0.042 265.755);
+  --muted: oklch(0.968 0.007 247.896);
+  --muted-foreground: oklch(0.554 0.046 257.417);
+  --accent: oklch(0.968 0.007 247.896);
+  --accent-foreground: oklch(0.208 0.042 265.755);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(0.929 0.013 255.508);
+  --input: oklch(0.929 0.013 255.508);
+  --ring: oklch(0.704 0.04 256.788);
+
+  --color-map-water: oklch(0.78 0.09 235);
+  --color-map-land: oklch(1 0 0);
+  --color-map-border: oklch(0.35 0.02 260);
+}
+
+.zitmapa-app .leaflet-container {
+  background: var(--color-map-water) !important;
+  font-family: inherit;
+}
+.zitmapa-app .leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  box-shadow: 0 10px 30px -10px oklch(0 0 0 / 0.25);
+  padding: 4px;
+}
+.zitmapa-app .leaflet-popup-content {
+  margin: 12px 14px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.zitmapa-app .leaflet-popup-tip {
+  box-shadow: none;
+}
+.zitmapa-app .marker-pin {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 2px 8px oklch(0 0 0 / 0.3);
+}
+.zitmapa-app .leaflet-tooltip.loc-label {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid oklch(0.85 0.01 260);
+  color: #0f172a;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px oklch(0 0 0 / 0.15);
+  white-space: nowrap;
+}
+.zitmapa-app .leaflet-tooltip.loc-label::before {
+  display: none;
+}
