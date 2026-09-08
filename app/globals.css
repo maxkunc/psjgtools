@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  --background: #faf8f4;
+  --foreground: #1a1a1a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+.bento-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "zitmapa"
+    "sched"
+    "wallet"
+    "inbox"
+    "gifts"
+    "remind";
+}
+
+@media (min-width: 768px) {
+  .bento-grid {
+    grid-template-columns: 1.25fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "zitmapa sched sched"
+      "zitmapa wallet inbox"
+      "gifts gifts remind";
+  }
+}
+
+.area-zitmapa { grid-area: zitmapa; }
+.area-sched { grid-area: sched; }
+.area-wallet { grid-area: wallet; }
+.area-inbox { grid-area: inbox; }
+.area-gifts { grid-area: gifts; }
+.area-remind { grid-area: remind; }
