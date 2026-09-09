@@ -64,7 +64,7 @@ export default function Home() {
           <div>
             <h2 className="text-2xl font-semibold sm:text-3xl">Žitmapa</h2>
             <p className="mt-2 max-w-xs text-sm text-white/80">
-              Interactive map tool. Open it up and take a look around.
+              A useful tool for Žitná’s map remembering assignments.
             </p>
           </div>
         </Link>
@@ -177,9 +177,9 @@ export default function Home() {
             />
           </svg>
           <div>
-            <h2 className="text-lg font-semibold">Open School</h2>
+            <h2 className="text-lg font-semibold">is psjg</h2>
             <p className="mt-1 text-sm text-white/80">
-              External tool. Opens in a new tab.
+              Redesigned system for grading, portfolio and exam planning.
             </p>
           </div>
         </a>
