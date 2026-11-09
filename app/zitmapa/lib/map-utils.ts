@@ -96,8 +96,10 @@ function linesToRows(lines: string[], prefix: string): LocationRow[] {
 
 export async function parsePdf(buf: ArrayBuffer): Promise<LocationRow[]> {
   const pdfjs = await import("pdfjs-dist");
-  const workerUrl = (await import("pdfjs-dist/build/pdf.worker.min.mjs?url")).default;
-  pdfjs.GlobalWorkerOptions.workerSrc = workerUrl;
+  pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+    "pdfjs-dist/build/pdf.worker.min.mjs",
+    import.meta.url,
+  ).toString();
   const doc = await pdfjs.getDocument({ data: buf }).promise;
   let text = "";
   for (let p = 1; p <= doc.numPages; p++) {
